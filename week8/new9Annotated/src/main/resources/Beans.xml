@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="petrenko"/>
+    <bean id="date" class="java.util.Date"/>
+    <bean id="dateFormat" class="java.text.DateFormat"
+          factory-method="getDateTimeInstance"/>
+    <bean id="consoleWriter" class="petrenko.ConsoleWriter" scope="prototype">
+<!--        <constructor-arg type="petrenko.MainApp" ref="app">
+        </constructor-arg>
+
+        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
+        <property name="MainApp" ref="app"/>-->
+    </bean>
+    <bean id="fileWriter" class="petrenko.FileWriter" scope="prototype" init-method="init">
+<!--        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
+        <constructor-arg index="2" value="news.txt"/>-->
+    </bean>
+    <bean id="newsService" class="petrenko.NewsService" scope="prototype">
+<!--        <property name="MainApp" ref="app"/>
+        <property name="consoleWriter" ref="consoleWriter"/>
+        <property name="fileWriter" ref="fileWriter"/>-->
+            </bean>
+
+    <bean id="app" class="petrenko.MainApp"/>
+
+
+</beans>

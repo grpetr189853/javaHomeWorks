@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="petrenko"/>
+
+    <bean id="messenger4" class="petrenko.MessengerImpl">
+    </bean>
+    <bean id="date" class="java.util.Date">
+
+    </bean>
+    <bean id="dateFormat" class="java.text.DateFormat"
+          factory-method="getDateInstance"/>
+
+    <bean id="writer4" class="petrenko.WriterToFileImpl">
+<!--        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
+        <constructor-arg index="2" value="storage4.txt"/>-->
+    </bean>
+
+    <bean id="cacheWriter" class="petrenko.CacheWriter">
+<!--        <constructor-arg index="0" value="3"/>
+        <constructor-arg>
+            <bean class="java.util.Date"/>
+        </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
+        <constructor-arg index="3" value="storage4.txt"/>-->
+    </bean>
+
+    <bean id="app" class="petrenko.Application">
+<!--        <constructor-arg ref="cacheWriter"/>
+        <constructor-arg ref="messenger4"/>-->
+    </bean>
+
+</beans>
