@@ -1,0 +1,14 @@
+white белый
+black черный
+red красный
+Beige бежевый
+Blue голубой
+Bronze бронзовый
+Brown коричневый
+Chocolate шоколадный
+Cinnamon Коричный
+Copper медный
+Cyan циан
+Gold золотой
+Gray серый
+Green зеленый

@@ -1,0 +1,9 @@
+white белый
+black черный
+red красный
+Beige бежевый
+Blue Синий
+Bronze Бронзовый
+Brown Коричневый
+Chocolate Шоколадный
+Cinnamon Коричный
